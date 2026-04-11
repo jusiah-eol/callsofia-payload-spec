@@ -1,4 +1,3 @@
-
 # CallSofia - Litify Payload Specification
 
 ## Overview
@@ -33,6 +32,9 @@ Before wrapping up a call, CallSofia sends a single JSON payload containing two 
     "litify_pm__Case_State__c": "NJ New Jersey",
     "litify_pm__Case_Postal_Code__c": "07102",
     "Employer_Name__c": "Acme Corp",
+    "Child_Injured_Party_Name__c": "Jane Doe",
+    "Injured_Party_Date_of_Birth__c": "2015-09-22",
+    "Signor_Relationship__c": "Parent",
     "Case_Type__c": "a035f0000034VT8AAM"
   }
 }
@@ -70,6 +72,9 @@ Before wrapping up a call, CallSofia sends a single JSON payload containing two 
 | litify_pm__Case_State__c | string | - | Format: "XX State Name" (e.g. "NJ New Jersey"). See appendix for valid values |
 | litify_pm__Case_Postal_Code__c | string | 255 | |
 | Employer_Name__c | string | 255 | If employed and not a minor. Otherwise send "N/A" |
+| Child_Injured_Party_Name__c | string | - | Only if caller is not the injured party |
+| Injured_Party_Date_of_Birth__c | date | - | Only if caller is not the injured party. Format: YYYY-MM-DD |
+| Signor_Relationship__c | string | - | Only if caller is not the injured party (e.g. "Parent", "Spouse") |
 | Case_Type__c | string | - | Record Type ID. See mapping below |
 
 ---
