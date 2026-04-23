@@ -12,7 +12,7 @@ Before wrapping up a call, CallSofia sends a single JSON payload containing two 
 {
   "lead": {
     "id": "863c4bb1-6f45-443b-bdc9-6bcf3a616bb2"
-  }
+  },
   "party": {
     "Phone": "5551234567",
     "litify_pm__Phone_Other__c": "5559876543",
